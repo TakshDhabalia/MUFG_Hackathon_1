@@ -1,51 +1,11 @@
-import { useState } from "react";
-import { FinancialChat } from "@/components/FinancialChat";
-import { ProfileSidebar } from "@/components/ProfileSidebar";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+// Update this page (the content is just a fallback if you fail to update the page)
 
 const Index = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-
-  const handleQuickAction = (action: string) => {
-    // This would trigger the chat input - for demo purposes we'll console.log
-    console.log("Quick action:", action);
-  };
-
   return (
-    <div className="h-screen flex bg-background">
-      {/* Mobile Sidebar Toggle */}
-      <div className="lg:hidden fixed top-4 left-4 z-50">
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-        >
-          {sidebarOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-        </Button>
-      </div>
-
-      {/* Sidebar */}
-      <div className={`
-        ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        fixed lg:relative lg:flex
-        transition-transform duration-300 ease-in-out
-        z-40 h-full
-      `}>
-        <ProfileSidebar onQuickAction={handleQuickAction} />
-      </div>
-
-      {/* Mobile Sidebar Overlay */}
-      {sidebarOpen && (
-        <div 
-          className="lg:hidden fixed inset-0 bg-black/50 z-30"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
-
-      {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col min-w-0">
-        <FinancialChat />
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
+        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
       </div>
     </div>
   );

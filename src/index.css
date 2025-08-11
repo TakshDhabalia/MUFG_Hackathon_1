@@ -8,47 +8,33 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Financial App Color Palette - Professional Blues & Greens */
     --background: 0 0% 100%;
-    --foreground: 210 20% 15%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 15%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 15%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    /* Primary: Professional Financial Blue */
-    --primary: 208 100% 47%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 208 100% 85%;
-    --primary-dark: 208 100% 35%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-    /* Secondary: Trust Green */
-    --secondary: 142 70% 45%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 142 50% 85%;
-    --secondary-dark: 142 70% 35%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    /* Muted: Soft Grays */
-    --muted: 210 15% 96%;
-    --muted-foreground: 210 15% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    /* Accent: Success Green */
-    --accent: 120 60% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    /* Chat Bubbles */
-    --chat-user: 208 15% 97%;
-    --chat-ai: 142 25% 94%;
-    --chat-ai-text: 210 20% 25%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 95%;
-    --ring: 208 100% 47%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
 
@@ -114,57 +100,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-  }
-
-  /* Financial Typography */
-  .financial-title {
-    @apply text-2xl font-bold tracking-tight;
-  }
-  
-  .financial-amount {
-    @apply text-xl font-semibold tabular-nums;
-  }
-  
-  .financial-label {
-    @apply text-sm font-medium text-muted-foreground;
-  }
-
-  /* Chat Message Animations */
-  .message-enter {
-    @apply animate-in slide-in-from-bottom-2 fade-in duration-300;
-  }
-
-  .message-typing {
-    @apply animate-pulse;
-  }
-
-  /* Financial Chart Styles */
-  .chart-tooltip {
-    @apply bg-card border border-border rounded-lg shadow-lg p-3;
-  }
-}
-
-@layer components {
-  /* Chat Bubble Components */
-  .chat-bubble-user {
-    @apply bg-[hsl(var(--chat-user))] border border-border rounded-2xl rounded-br-md px-4 py-3 max-w-xs ml-auto;
-  }
-
-  .chat-bubble-ai {
-    @apply bg-[hsl(var(--chat-ai))] text-[hsl(var(--chat-ai-text))] rounded-2xl rounded-bl-md px-4 py-3 max-w-md;
-  }
-
-  /* Financial UI Components */
-  .financial-card {
-    @apply bg-card border border-border rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  .quick-action-btn {
-    @apply bg-primary/5 hover:bg-primary/10 text-primary border border-primary/20 rounded-lg px-3 py-2 text-sm font-medium transition-colors;
-  }
-
-  .portfolio-metric {
-    @apply flex justify-between items-center py-2 border-b border-border last:border-0;
+    @apply bg-background text-foreground;
   }
 }
