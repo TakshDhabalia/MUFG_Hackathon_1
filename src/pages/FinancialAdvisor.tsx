@@ -4,12 +4,14 @@ import { ProfileSidebar } from "@/components/ProfileSidebar";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const Index = () => {
+export default function FinancialAdvisor() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [inputValue, setInputValue] = useState("");
 
   const handleQuickAction = (action: string) => {
-    // This would trigger the chat input - for demo purposes we'll console.log
-    console.log("Quick action:", action);
+    setInputValue(action);
+    // This would trigger the chat input in a real implementation
+    // For now, we'll just set the input value
   };
 
   return (
@@ -49,6 +51,4 @@ const Index = () => {
       </div>
     </div>
   );
-};
-
-export default Index;
+}
